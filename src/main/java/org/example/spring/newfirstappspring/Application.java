@@ -12,9 +12,15 @@ public class Application {
     public static void main(String[] args) {
 //        SpringApplication.run(NewFirstAppSpringApplication.class, args);
 
+        //IoC
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext("org.example.spring.newfirstappspring");
-        Vehicle vehicle = context.getBean("motorbike", Vehicle.class);
-        vehicle.startEngine();
+        //DI
+        Person person = context.getBean("person", Person.class);
+        person.startVehicleEngine();
+
+        Parking parking = context.getBean("parking", Parking.class);
+        System.out.println(parking.getVehiclesList());
+        System.out.println(parking.getVehiclesMap());
         context.close();
     }
 }
