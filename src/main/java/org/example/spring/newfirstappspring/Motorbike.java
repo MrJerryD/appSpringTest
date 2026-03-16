@@ -2,7 +2,7 @@ package org.example.spring.newfirstappspring;
 
 import org.springframework.stereotype.Component;
 
-@Component
+
 public class Motorbike implements Vehicle {
 
     public Motorbike() {
